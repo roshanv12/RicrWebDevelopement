@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexBox</title>
+    <style>
+        .container{
+            background-color: rgb(243, 243, 188);
+            border: solid black 2px;
+            margin: 5px;
+            padding: 5px;
+            height: 500px;
+            /* bydefolt row direction */
+            /* display: flex; */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse;
+             flex-direction: column-reverse; */
+             /* flex-direction: row; */
+             /* flex-wrap: wrap; */
+            display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+            justify-content: start;
+            justify-content: end;
+            justify-content: space-between;
+            justify-content: space-around;
+            
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            border: solid black 2px;
+            margin: 5px;
+            padding: 5px;
+        }
+        #box1{
+            background-color: rgb(220, 238, 245);
+        }
+
+        #box2{
+            background-color: green;
+        }
+
+        #box3{
+            background-color: yellow;
+        }
+
+        #box4{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+
+    <span>roshan</span>
+    <span>roshan</span>
+</body>
+</html>

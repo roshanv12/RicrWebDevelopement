@@ -1,0 +1,28 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ #img1{
+    width: 500px;
+   
+    /* float: left;
+    float: inline-end;
+    float: inline-start;
+    float: none; */
+     float: right;
+     
+}
+
+#img2{
+    width: 500px;
+   
+    /* float: left;
+    float: inline-end;
+    float: inline-start;
+    float: none; */
+     float: right;
+     clear: right;
+     
+}
+

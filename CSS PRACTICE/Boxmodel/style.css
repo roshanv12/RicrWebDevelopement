@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ .maincontainer{
+            background-color: rgb(221, 221, 156);
+            border: solid black 2px;
+            margin:5px ;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+             
+        }
+        .leftcontainer{
+            background-color: rgb(23, 23, 68);
+            width: 400px;
+            height: 1163px;
+            display: flex;
+            justify-content: center;
+
+        }
+        img{
+            width: 250px;
+            border-radius: 50%;
+            margin:30px;
+           
+            /* justify-content: center; */
+           
+        }
+        .heignts{
+            color: blanchedalmond;
+            margin-left: 20px;
+            margin-top: 5px;
+           
+
+        }
+        #h2{
+            border-bottom:solid black 3px ;
+            padding-bottom: 15px;
+        }
+        .rightcontainer{
+            background-color: rgb(210, 210, 236);
+            width: 800px;
+            height: 1100px;
+            padding: 30px;
+            /* display: flex; */
+
+        }
+    #para1{
+        font-size: 20px;
+    }
+    #para2{
+        font-size: 20px;
+        margin-left: 100px;
+        
+    }
+    #list1{
+        color: rgb(165, 165, 148);
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+    #list1 h3{
+        color: bisque;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }

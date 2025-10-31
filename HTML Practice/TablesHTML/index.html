@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables</title>
+</head>
+<body>
+    <h1 align="center">Table 1:</h1>
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Collage</th>
+                <th>Address</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>Roshan Vishwakarma</td>
+                <td rowspan="2">SITR Bhopal</td>
+                <td>Itarsi</td>
+                <td rowspan="2">20</td>
+            </tr>
+            <tr>
+                <td>Arun Sarathe</td>
+                <!-- <td>SITR Bhopal</td> -->
+                <td>Budni</td>
+                <!-- <td>20</td> -->
+            </tr>
+            <tr>
+                <td>Piyush Chaourey</td>
+                <td>SITR Bhopal</td>
+                <td>Hoshangabad</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>Rshni patel</td>
+                <td>JNCT Bhopal</td>
+                <td>Anand Nagar</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Rohit Rajput</td>
+                <td>LNCT Bhopal</td>
+                <td>Rajiv Nagar</td>
+                <td>22</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h1 align="center">Table 2:</h1>
+    <table border="1" align="center">
+        <tbody align="center">
+        <tr>
+            <td>Colum 1</td>
+            <td>Colum 2</td>
+            <td>Colum 3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Row 1 Cell 1</td>
+            <td>Row 1 Cell 2</td>
+            <td>Row 1 Cell 3</td>
+        </tr>
+        <tr>
+            <td>Row 2 Cell 2</td>
+            <td>Row 2 Cell 3</td>
+        </tr>
+        <tr>
+            <td colspan="3">Row 3 Cell 1</td>
+        </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h1 align="center">Table 3</h1>
+
+    <table border="1" align="center">
+        <thead>
+            <th>No.</th>
+            <th>Full Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Type</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th>1</th>
+                <th>Bill Gates</th>
+                <th>Founder Microsoft</th>
+                <th>$ 1000</th>
+                <th rowspan="4">Company Founder</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>Steve Jobs</th>
+                <th>Founder Apple</th>
+                <th>$ 1200</th>
+            </tr>
+            <tr>
+                <th>3</th>
+                <th>Larry Page</th>
+                <th>Founder Google</th>
+                <th>$ 1100</th>
+            </tr>
+            <tr>
+                <th>4</th>
+                <th>Mark Zuckeberg</th>
+                <th>Founder Facebook</th>
+                <th>$ 1300</th>
+            </tr>
+        </tbody>
+        <tfoot>
+             <tr>
+                <th colspan="3">Total Expense:</th>
+                <th>$ 4600</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1 align="center">Table 4:</h1>
+    <table border="5" align="center">
+        <thead>
+            <tr>
+                <th>Country</th>
+                <th>State</th>
+                <th>City</th>
+                <th>Street</th>
+                <th>Male</th>
+                <th>Female</th>
+                <th>Others</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="8">1</td>
+                <td rowspan="4">Kerala</td>
+                <td rowspan="2">Cochin</td>
+                <td>New Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Main Street</td>
+                <td>300</td>
+                <td>288</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Trivandrum</td>
+                <td>Guru Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>TVK Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td rowspan="4">Maharastra</td>
+                <td rowspan="2">Mumbai</td>
+                <td>Krisha Street</td>
+                <td>700</td>
+                <td>950</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Main Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Surath</td>
+                <td>New Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Billa Street</td>
+                <td>500</td>
+                <td>600</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td rowspan="2">2</td>
+                <td rowspan="2">Alaska</td>
+                <td rowspan="2">AKA Central</td>
+                <td>New Street</td>
+                <td>200</td>
+                <td>210</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Cross Street</td>
+                <td>1000</td>
+                <td>1050</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h1 align="center">Table 5:</h1>
+
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th rowspan="3">Day</th>
+                <th colspan="3">Seminar</th>
+            </tr>
+            <tr>
+                <td colspan="2">Schedule</td>
+                <td rowspan="2">Topic</td>
+            </tr>
+            <tr>
+                <td>Begin</td>
+                <td>End</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Monday</td>
+                <td rowspan="2">8:00 a.m.</td>
+                <td rowspan="2">5:00 a.m.</td>
+                <td>Introduction XML</td>
+            </tr>
+            <tr>
+                <td>Vailidity: DTD and Relax NG</td>
+            </tr>
+            <tr>
+                <td rowspan="3">Tuesday</td>
+                <td>8:00 a.m.</td>
+                <td>11:00 a.m.</td>
+                <td rowspan="2">XPath</td>
+            </tr>
+            <tr>
+                <td>11:00 a.m.</td>
+                <td>2:00 p.m.</td>
+                
+            </tr>
+            <tr>
+                <td>11:00 a.m.</td>
+                <td>2:00 p.m.</td>
+                <td>XSL Transformations</td>  
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>8:00 a.m.</td>
+                <td>12:00 p.m.</td>
+                <td>XSL Formatting Objects</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    
+
+
+</body>
+</html>

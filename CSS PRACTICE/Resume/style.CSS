@@ -1,0 +1,185 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.MainContainer{
+
+    width: 800px;
+    height: 1100px;
+    margin:10px 300px;
+    background-color: rgb(231, 231, 159);
+    border: solid black 1px;
+    display: flex;
+   
+   
+    
+   
+
+}
+
+.left{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(38, 38, 73);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  
+}
+
+#img{
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 50%;  
+}
+#h{
+    color: white;
+}
+#h1{
+    color: rgb(182, 182, 109);
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+#R{
+    color: white;
+    padding-top: 20px;
+    margin: 10px;
+}
+#o{
+    color: beige;
+}
+#t{
+    color: rgb(221, 221, 128);
+    padding-bottom:5px ;
+}
+ul{
+    list-style-type: none;
+}
+
+.right{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(208, 208, 238);
+
+   
+}
+
+.main1{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px ;
+}
+#para{
+    margin-top: 20px;
+}
+
+#inner{
+    
+    margin-top:20px;
+    display: flex;
+    
+   
+
+}
+
+.leftdiv{
+    /* background-color: blue; */
+    min-width: 30%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+}
+
+.box{
+    color: blue;
+}
+#w{
+    margin: 35px 15px;
+
+}
+.rightdiv{
+    /* background-color: gray; */
+    min-width: 70%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    
+}
+.box1{
+     border-left: 1px solid black;
+     padding-left:10px;
+}
+
+.main2{
+    display: flex;
+    height: 250px;
+    width: 500px;
+    margin: 10px 30px;
+   justify-content: center;
+}
+#g{
+    margin: 5px 30px;
+}
+
+.box2{
+    width: 160px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+   
+   
+}
+
+#t{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+
+   
+}
+
+
+.box3{
+    width: 340px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+   
+    
+}
+
+#h5{
+    color: blue;
+}
+#r1{
+    color: black;
+}
+.t{
+    display: flex;
+   
+    padding-top: 35px;
+}
+
+#p1{
+    border-left: solid 1px black;
+    padding-left:10px ;
+   
+    padding-top: 5px;
+    
+}
+#p2{
+    border-left: solid 1px black;
+    padding-left:10px ;
+    
+}
+
+
+

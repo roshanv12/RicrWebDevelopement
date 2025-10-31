@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+     href="<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">">
+    <style>
+    
+    .main{
+        background-color: blue;
+        height: 100vh;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: end;
+    }
+    .form{
+        border: 1px solid black;
+        background-color: white;
+        height: fit-content;
+        width: 400px;
+        display: grid;
+        gap: 20px;
+        padding: 20px;
+        margin-bottom: 150px;
+        border-radius: 20px;
+
+
+    }
+
+    #check{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .form-feild{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        padding-bottom: 5px;
+        border-bottom: 1px solid black;
+    }
+
+    button{
+        background-color: blue;
+        border: 2px solid black;
+        color: wheat;
+        padding: 10px;
+        border-radius: 5px;
+
+    }
+    #a{
+        display: flex;
+        justify-content: center;
+    }
+    #a1{
+        margin-left:150px ;
+       
+    }
+
+    button:hover{
+        background-color: white;
+        color: blue;
+    }
+
+    input:focus-within {
+        outline: none;
+      }
+
+
+    
+   
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div id="login" class="form">
+        <div>
+            <h1>Login</h1>
+            <hr>
+        </div>
+        
+        <div>
+         <input type="text" id="email" class="email" placeholder="Enter your email"/> 
+         <hr>
+        </div>
+        
+        <div>
+        <input type="password" id="password" class="password" placeholder="Confirm a password"/> 
+        <hr>
+        </div>
+        
+        <div id="check">
+            <input type="checkbox" id="checkbox" >
+
+             <span>Remember me</span> 
+              <a href="#" id="a1">Forgot password</a> 
+              <hr>
+        </div>
+
+            <button>Login Now</button>
+
+         <div id="a">
+            <span>Dont have an account?</span>
+            <a href="#">signup now</a>
+
+         </div>
+       
+    </div>
+
+    <div id="registration" class="form">
+        <div>
+            <h1>registration</h1>
+        </div>
+          
+        <div class="form-feild">
+              <input type="text" id="name" placeholder="Enter your name">
+             
+        </div>
+
+        <div class="form-feild">
+            <input type="text" id="email" class="email" placeholder="Enter your email"/>
+            
+        </div>
+
+        <div class="form-feild">
+             <input type="password" id="password" class="password" placeholder="Confirm a password"/> 
+            
+        </div>
+
+        <div class="form-feild">
+        <input type="password" id="password" class="password" placeholder="Confirm a password"/> 
+       
+        </div>
+
+        <div id="check">
+        <input type="checkbox" id="checkbox" >
+         <span>I accept all terms & conditions</span>
+        </div>
+             <button>Register Now</button>      
+         <div  id="a">
+            <span>Already have an account?</span>
+            <a href="#">Login now</a>
+         </div>    
+    </div>
+
+    </div>
+</body>
+</html>

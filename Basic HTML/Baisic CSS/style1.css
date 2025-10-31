@@ -1,0 +1,45 @@
+
+ p{
+    font-style: italic;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: 599;
+    line-height: 25px;
+ }
+
+ #para1
+ {
+
+   /* background color & text color */
+
+    background-color: blueviolet;
+    color: beige;
+ }
+
+ #para2
+ {
+   /* rgb color=>  r-red , g-green, b-blue  */
+
+    background-color: rgb(90, 72, 245);
+ }
+
+ #para3
+ {
+   /* rgba color => r-red , g-green, b-blue, a-alpha value */
+
+    background-color: rgba(51, 168, 40, 0.678);
+    
+ }
+
+ #para4{
+   /*hexadecimal color  pickar */
+
+   background-color: #e9d84198; 
+ }
+
+ #para5{
+   /* HSL color  */
+   background-color: hsl(286, 50%, 69%);
+ }
+
+ 

@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: none;
+    background-color: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+   
+}
+.navcontainer{
+    width: 100vw;
+    background-color: rgba(181, 181, 219, 0.747); 
+    background : #833AB4;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav{
+    width: 100%;
+}
+#navList{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    list-style-type: none;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#navlogo{
+    font-size: 2.5rem;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#navItems{
+    display: flex;
+    gap: 40px;
+  
+}
+
+
+.footerbox{
+    background : #833AB4;
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    text-align: center;
+    min-height: 40px;
+    
+}
+
+.footerbox p{
+    color: azure;
+    font-size: 2rem;
+}
+.contentbox {
+    width: 60%;
+    height: 900px;
+    margin: auto;
+   
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 3rem;
+    box-shadow: 1px 1px 30px black;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    width: 450px;
+    padding-top:40px ;
+    border-radius: 20px;
+    transition: all 0.6s linear 0s;
+}
+.rightbox{
+    position: relative;
+    overflow: hidden;
+}
+.rightbox img:hover{
+    position: relative;
+    transform: scale(1.1);
+}
+.leftbox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h1{
+    font-size: 3rem;
+    }
+
+    h2{
+         font-size: 2rem;
+    }
+}
+leftbox h2 {
+    font-size: 2rem;
+}
+.ingbox{
+    font-size: 1.4rem;
+}
+.recipebox{
+    font-size: 1.1rem;
+}

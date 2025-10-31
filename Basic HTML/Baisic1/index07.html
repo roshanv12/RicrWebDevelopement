@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index07</title>
+
+    <style>
+    .container
+    {
+        background-color: beige;
+        border: solid black 2px;
+        height: 800px;
+          margin: 2px;
+        padding:2px;
+        display: flex;
+        /* flex-direction: column; */
+        flex-direction: row;
+        /* flex-direction: row-reverse;
+        flex-direction: column-reverse; */
+        /* flex-wrap: wrap; */
+       
+        /* flex-wrap: nowrap; */
+        justify-content: start;
+        /* justify-content: center; */
+
+        align-items: start;
+        align-content: start;
+        /* align-items: center; */
+        /* align-items: start;
+        align-items: end; */
+       /* align-items: stretch; */
+
+       align-content: start;
+       align-content: end;
+       align-content: center;
+    }
+    .box{
+        /* height: 200px;
+        width: 200px; */
+        border:solid brown 2px;
+        margin: 2px;
+        padding:2px;
+    }
+    #box1{
+        background-color: aqua;
+        /* order: 500; */
+        /* flex-shrink: 15; */
+        /* flex-grow: 5; */
+        align-self: center;
+    }
+     #box2{
+        background-color: blue;
+        /* flex-grow: 1; */
+        align-self: start;
+    }
+     #box3{
+        background-color: orange;
+        /* flex-grow: 1; */
+        align-self: end;
+    }
+     #box4{
+        background-color: brown;
+        /* order: -1 */
+        /* flex-grow: 1; */
+        /* flex-basis: 500px; */
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+    </div>
+</body>
+</html>
