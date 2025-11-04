@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.blueContainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+.whiteContainer{
+    width: 350px;
+    height: 420px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px black;
+}
+.mainHeading{
+    margin-left: 30px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.userInputs {
+    margin: 20px 40px;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 16px;
+    
+    
+    input{
+       margin: 10px;
+        padding-bottom: 10px;
+        border: none;
+        border-bottom: solid gray 1px;  
+    }  
+}
+
+.loginButton {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 50px;
+
+    button{
+        width: 250px;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 1px 1px 15px gray;
+        font-size: 17px;
+    }
+
+    :hover{
+        background-color: white;
+        color: black;
+        border: solid gray 1px;    
+    }
+    
+    
+}
+.inputCheckbox{
+    margin-top: 20px;
+    a{
+        margin-left: 30px;
+    } 
+}
+#signupNuw{
+    margin-left: 50px;
+}
