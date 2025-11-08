@@ -1,0 +1,44 @@
+:root{
+    --primary:#41A67E;
+    --secondary:#A18D6D;
+    --tertiary:#9BB4C0;
+    --text:#E9B63B;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    padding: 50px;
+    color: #41A67E;
+    font-size: large;
+    font-family: cursive;
+    text-shadow: 1px 1px 10px black;
+    border: solid black 2px;
+    border-radius: 20px;
+    background-color:#41A67E;
+    position: relative;
+
+    
+}
+.subHeading{
+    width: 200px;
+    height: 200px;
+    border: solid black 2px;
+    color: #A18D6D;
+    button:202px;
+    right: 20px;
+}
+.mainBox{
+    width: 200px;
+    height: 200px;
+    border: solid black 2px;
+    background-color: #9BB4C0;
+}
