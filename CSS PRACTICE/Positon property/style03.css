@@ -1,0 +1,51 @@
+/* div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: solid black 2px;
+    display: inline-block;
+}
+#box1{
+    position:static;
+    background-color: red;
+}
+#box2 {
+    position:relative;
+    top: 20px;
+    left: 10px;
+    background-color: blueviolet;
+    z-index: 22;
+}
+#box3 {
+    position: absolute;
+    top: 500px;
+    left: 20px;
+}
+#box4 {
+    background-color: rosybrown;
+    position: fixed;
+   top: 50px;
+   z-index: 4;
+    
+    
+} */
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: solid black 2px;
+    display: inline-block;
+}
+body{
+    background-image: url(wallpepar.jpg);
+    background-size: cover;
+}
+#box1 {
+    background-image: url(wallpepar.jpg) ;
+    background-size: cover;
+}
+#box2 {
+    background-image: url(Macbook.webp);
+    background-size: cover;
+}
