@@ -2,7 +2,7 @@
     width: 100px;
     height: 100px;
     border: solid black 2px;
-    /* border-radius: 50%; */
+    border-radius: 50%;
     position: absolute;
     animation: movingDabba 5s linear infinite;
 

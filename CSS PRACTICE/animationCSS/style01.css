@@ -1,0 +1,19 @@
+div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid #FFE66D 20PX;
+    border-top: solid #4ECDC4 20PX;
+    animation: spinAnimate 3s ease-in-out 0s infinite normal;
+
+}
+@keyframes spinAnimate {
+    from {
+            transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+

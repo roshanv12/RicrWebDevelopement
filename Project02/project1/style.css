@@ -67,7 +67,7 @@
     /* background-color: aqua;
     border: solid black 2px; */
     display: grid;
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     
 }
@@ -174,8 +174,12 @@
 
     img{
        
-        width: 90%;
+        width: 95%;
         height: 100%;
+        border-radius: 50px;
+        
+        
+        
 
     }
 }
