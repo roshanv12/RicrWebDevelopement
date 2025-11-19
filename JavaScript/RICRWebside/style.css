@@ -53,18 +53,18 @@
     margin-left: 100px;
    
     button {
-        background-color: rgba(40, 40, 104, 0.733);
+        background-color: #125785;
         font-size: 18px;
         color: white;
         width: 150px;
         height: 50px;
         border: none;
         border-radius: 10px;
-        box-shadow: 3px 3px 1px 2px rgb(143, 143, 236);
+        box-shadow: 3px 3px 1px 2px #299eecbd;
     }
     button:hover {
 
-        box-shadow: 2px 2px 2px 1px rgb(143, 143, 236);
+        box-shadow: 2px 2px 2px 1px #299eecbd;
         
     }
 
@@ -79,12 +79,10 @@
 
 #main-content {
     width: auto;
-    height: 1500px;
+    height: 1400px;
     display: flex;
     justify-content: center;
    
-    
-    border: solid black 2px;
 }
 
 #EnquiryForm {
@@ -266,12 +264,134 @@
     margin-top: 50px;
     margin-bottom: 50px;
     button {
-        width: 200px;
-        height: 50px;
+        width: 150px;
+        height: 60px;
         border: none;
-       background-color: rgba(40, 40, 104, 0.733);
+       background-color:black;
        color: white;
        font-size: 20px;
-       border-radius: 25px;
+       border-radius: 30px;
+       
+    }
+
+    button:hover {
+        background-color: white;
+        color: black;
+        box-shadow: 1px 1px 5px black;
+    }
+}
+
+/* blue-buttom-container */
+
+.blue-buttom-container {
+    width: 100%;
+    height: fit-content;
+    background-color: #125785;
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+#list-main-box {
+    width: 90%;
+    height: 80%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    /* border: solid white 2px ; */
+   
+    
+
+    .blueListBox {
+        width: 300px;
+        height: 300px;
+        color: whitesmoke;
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+           
+            a {
+                 text-decoration: none;
+                 font-size: 18px;
+                 font-weight: 400;
+                 color: white;
+                 
+            }
+           
+        }
+    }
+
+    #list1 {
+        width: 300px;
+        height: 300px;
+        
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 20px;
+
+        }
+        img {
+            width: 200px;
+        }
+
+    }
+
+    #list2 {
+        width: 300px;
+        height: 350px;
+    }
+
+    .iconsBox {
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 20px;
+        gap: 10px;
+        margin-left: 30px;
+
+        a {
+            i {
+                
+                border-radius: 20px;
+                font-size: 30px;
+                color: white;
+                
+            }
+        }
+    }
+}
+
+/* footer box */
+
+.footerBox {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #125785;
+
+    #footerBoxSub {
+        width: 90%;
+        border-top: solid beige 2px;
+        height: 100px;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(245, 245, 245, 0.733);
+
+        }
+        
     }
 }
