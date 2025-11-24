@@ -1,0 +1,19 @@
+.big-box{
+    width: 50rem;
+    border: 1px solid #000;
+    display: flex;
+    
+}
+.s-box1{
+    width: 30rem;
+    border: 1px solid black;
+    margin: 3px;
+    padding: 5px;
+    
+}
+.s-box2{
+    width: 20rem;
+    border: 1px solid black;
+    margin: 3px;
+    padding: 5px;
+}
