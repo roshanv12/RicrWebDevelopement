@@ -1,0 +1,158 @@
+#mainHeaderDiv {
+    
+    position: fixed;
+    opacity: 100%;
+}
+#logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: orangered;
+}
+
+#searchInput {
+    border:solid orangered 2px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 4px;
+    outline: none;
+}
+
+#btn {
+    background-color: orangered;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 7px;
+    width: 65px;
+    border: none;
+    box-shadow: 1px 1px 10px orangered;
+}
+
+#anchorTags {
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    a:hover {
+        box-shadow: 1px 1px 5px white;
+    }
+}
+
+/** MAIN CONTANT**/
+
+#mainDiv {
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+    flex-wrap:wrap ;
+}
+
+#leftMainDiv {
+    color: white;
+    width: 50%;
+    height: 400px;
+    
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+        color: orangered;
+        font-weight: 700;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h2 {
+        font-weight: 500;
+    }
+
+    button {
+        width: 100px;
+        background-color: orangered;
+        padding:5px 15px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+    }
+}
+#rightMainDiv {
+    padding:10px ;
+    width: 300px;
+    height: 400px;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.27);
+    margin-bottom: 100px;
+   
+    #loginHereBTN {
+        width: 15rem;
+        border: none;
+        border-radius: 5px;
+        color: orangered;
+        font-size: large;
+        font-weight: 600;
+        box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.307);
+       
+    }
+
+    input {
+        outline: none;
+        border: none;
+        border-bottom: solid orangered 2px;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        padding: 5px;
+        font-size: large;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 18px;
+        color: white;
+        font-weight: 500;
+      
+
+        a {
+            color: orangered;
+            text-decoration: none;
+           
+        }
+    }
+}
+
+#loginbtn {
+    button:hover {
+        background-color: black;
+        box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.043);
+    }
+}
+
+#login2btn {
+
+    button {
+        width: 15rem;
+        border: none;
+        border-radius: 5px;
+        color: black;
+        font-size: 18px;
+        padding: 5px 5px;
+        margin-top: 15px;
+        font-weight: 600;
+         box-shadow: 1px 1px 5px rgba(255, 68, 0, 0.542);
+        background-color: orangered;
+    }
+        :hover {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.324);
+            box-shadow: 1px 1px 5px orangered ;
+    }
+       
+}
+
