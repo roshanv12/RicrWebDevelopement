@@ -26,7 +26,7 @@ function search() {
     flag.style.left = "350px";
     flag.title = "State: Ladakh \nCapital: Leh";
   }
-  if(state === "jammu & kashmir"){
+  if(state === "jammu & kashmir" || state === "jk"){
     flag.style.top = "150px";
     flag.style.left = "300px";
     flag.title = "State: Jammu & Kashmir \nCapital: Srinagar";
