@@ -28,23 +28,22 @@ function claculateAgeDifference(start, end) {
     monthAgeDiff = 12 + currMonth - dobMonth;
   }
 
-  let dateAgeDiff;
+  //   let dateAgeDiff;
 
-  if (currDate >= dobDate) {
-    dateAgeDiff = currDate - dobDate;
-  } else {
-    monthAgeDiff--;
-    noOfDaysInDOB = daysInMonth(dobMonth, dobYear);
-    dateAgeDiff = noOfDaysInDOB + currDate - dobDate;
+  //   if (currDate >= dobDate) {
+  //     dateAgeDiff = currDate - dobDate;
+  //   } else {
+  //     monthAgeDiff--;
+  //     noOfDaysInDOB = daysInMonth(dobMonth, dobYear);
+  //     dateAgeDiff = noOfDaysInDOB + currDate - dobDate;
 
-    if (monthAgeDiff < 0) {
-      monthAgeDiff = 11;
-      yearAgeDiff--;
-    }
-  }
+  //     if (monthAgeDiff < 0) {
+  //       monthAgeDiff = 11;
+  //       yearAgeDiff--;
+  //     }
+  //   }
 
-  output.innerHTML =
-    yearAgeDiff + " Years, " + monthAgeDiff + " Months, " + " Days";
+  output.innerHTML = yearAgeDiff + " Years, " + monthAgeDiff + " Months ";
 }
 
 function daysInMonth(month, year) {
