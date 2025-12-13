@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: white;
+  background-color: blue;
+}
+
+.game {
+  width: 450px;
+  height: 300px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.074);
+  gap: 30px;
+  box-shadow: 1px 1px 5px 1px gray;
+
+  input {
+    width: 200px;
+    height: 40px;
+    font-size: larger;
+    outline: none;
+    border: none;
+    box-shadow: 1px 1px 5px 0 gray;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  button {
+    width: 130px;
+    height: 40px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0 gray;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+  }
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.002);
+    color: black;
+  }
+}
+.paraHeading {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.output-para {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
