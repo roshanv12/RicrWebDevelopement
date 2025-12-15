@@ -36,4 +36,5 @@ async function getGeoLoc(City) {
   const lon = data[0].lon;
 
   return { lat, lon };
+  
 }
