@@ -37,3 +37,40 @@ Marray.unshift(200); // array ke first index par 200 add ho jayega.
 console.log(Marray);
 Marray.shift(); // shift karne se array ke first index par jo v value hogi wah remove ho jayegi
 console.log(Marray);
+
+function val() {
+  console.log("roshan");
+}
+val();
+
+let vlaue = function () {
+  console.log("roshan");
+};
+vlaue();
+
+let myvalue = () => {
+  console.log("roshan");
+};
+
+myvalue();
+
+let roshan = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(roshan);
+let newroshan = roshan.slice(2, 3);
+console.log(newroshan);
+
+//  Map , filter, reduce.
+
+/** ye teeno ek function except karte hai .
+ * ye teeno kuch na kuch return karte hai.
+ * ineh store karne ke liye ek new variable banana padta hai.
+ */
+
+// Map
+
+let arrA = [1, 2, 3, 4, 5, 6, 7, 8];
+let newarrA = arrA.map(function (value) {
+  return value + 5;
+});
+
+console.log(newarrA);
