@@ -60,3 +60,12 @@ mydiv.style.fontSize = "2rem";
 let newpara = document.createElement("p");
 newpara.textContent = "my paragraph";
 document.body.append(newpara);
+
+let mydiv = document.createElement("div");
+mydiv.textContent = "my name is roshan vishwakarma i am from itarsi.";
+document.body.append(mydiv);
+mydiv.style.fontSize = "2rem";
+
+let newpara = document.createElement("p");
+newpara.textContent = "my paragraph";
+document.body.append(newpara);
