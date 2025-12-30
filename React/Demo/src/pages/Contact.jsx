@@ -1,30 +1,57 @@
 import React, { useState } from "react";
+import { data } from "react-router-dom";
 
 const Contact = () => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [contactData, setContactData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    city: "",
+    subject: "",
+    message: "",
+    religion: "",
+    gender: "",
+    skill: [],
+  });
+
   const [isLoading, setIsLoading] = useState(false);
 
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    if (type === "checkbox") {
+      let temp = contactData.skill;
+      if (checked) {
+        temp.push(value);
+        setContactData((previousData) => ({ ...previousData, [name]: temp }));
+      } else {
+        temp = Object.values(temp); //Convert to Array
+        temp = temp.filter((word) => word !== value); //Remove the Undersired Value
+        setContactData((previousData) => ({ ...previousData, [name]: temp }));
+      }
+    } else {
+      setContactData((previousData) => ({ ...previousData, [name]: value }));
+    }
+  };
+
   const handleClearForm = () => {
-    setFullName("");
-    setEmail("");
-    setMessage("");
+    setContactData({
+      fullName: "",
+      email: "",
+      phone: "",
+      city: "",
+      subject: "",
+      message: "",
+      religion: "",
+      gender: "",
+      skill: [],
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch(
-        "https://official-joke-api.appspot.com/jokes/jhbaskdjbf"
-      );
-      const data = {
-        fullName,
-        email,
-        message,
-      };
-      console.log(data);
+      console.log(contactData);
     } catch (error) {
       console.log(error.message);
     } finally {
@@ -35,46 +62,190 @@ const Contact = () => {
 
   return (
     <>
-      <div className="text-center text-danger fw-bolder ">
+      <div className="text-center d-flex flex-column w-auto gap-2 p-3">
         <h1>Contact Us</h1>
-        <div className="container mb-3 p-3 d-flex flex-column  shadow w-25  text-dark rounded shadow-lg">
-          <form onReset={handleClearForm} onSubmit={handleSubmit}  >
+        <div className="container w-auto fw-bold">
+          <form
+            onReset={handleClearForm}
+            onSubmit={handleSubmit}
+            className="text-center d-flex flex-column w-auto gap-2 p-3 w-25 rounded shadow"
+          >
             <div>
               <label htmlFor="fullName">Full Name</label>
               <input
                 type="text"
                 name="fullName"
                 id="fullName"
-                value={fullName}
-                onChange={(event) => setFullName(event.target.value)}
+                value={contactData.fullName}
+                onChange={handleChange}
                 placeholder="Enter your Name"
-                className="text-primary border-0 rounded mx-2 p-2 shadow my-2"
+                className="text-primary ms-2 border-0 rounded shadow p-2"
               />
             </div>
+
             <div>
               <label htmlFor="email">Email</label>
               <input
                 type="email"
                 name="email"
                 id="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                value={contactData.email}
+                onChange={handleChange}
                 placeholder="Enter your Email"
-                className="text-primary border-0 rounded mx-2 p-2 shadow my-2"
+                className="text-primary ms-2 border-0 rounded shadow p-2"
               />
             </div>
-            <div className="d-flex align-items-center justify-content-center gap-3 mt-3">
+
+            <div>
+              <label htmlFor="phone">Phone</label>
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                value={contactData.phone}
+                onChange={handleChange}
+                placeholder="Enter your phone"
+                className="text-primary ms-2 border-0 rounded shadow p-2"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="city">City</label>
+              <input
+                type="text"
+                name="city"
+                id="city"
+                value={contactData.city}
+                onChange={handleChange}
+                placeholder="Enter your city"
+                className="text-primary ms-2 border-0 rounded shadow p-2"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="subject">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                value={contactData.subject}
+                onChange={handleChange}
+                placeholder="Enter your subject"
+                className="text-primary ms-2 border-0 rounded shadow p-2"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="religion">Religion</label>
+              <select
+                name="religion"
+                id="religion"
+                onChange={handleChange}
+                value={contactData.religion}
+              >
+                <option value="">--Select Religion--</option>
+                <option value="islam">Islam</option>
+                <option value="hinduism">Hinduism</option>
+                <option value="christianity">Christianity</option>
+                <option value="buddhism">Buddhism</option>
+                <option value="jainism">Jainism</option>
+                <option value="sikhism">Sikhism</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="gender">Gender</label>
+              <input
+                type="radio"
+                name="gender"
+                value="male"
+                onChange={handleChange}
+                checked={contactData.gender === "male"}
+              />{" "}
+              Male
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                onChange={handleChange}
+                checked={contactData.gender === "female"}
+              />{" "}
+              Female
+              <input
+                type="radio"
+                name="gender"
+                value="other"
+                onChange={handleChange}
+                checked={contactData.gender === "other"}
+              />{" "}
+              Other
+            </div>
+
+            <div>
+              <label htmlFor="skill">Skill known</label>
+              <input
+                type="checkbox"
+                name="skill"
+                value="html"
+                onChange={handleChange}
+                checked={
+                  Object.values(contactData.skill).find(
+                    (word) => word === "html"
+                  )
+                    ? true
+                    : false
+                }
+              />{" "}
+              HTML
+              <input
+                type="checkbox"
+                name="skill"
+                value="css"
+                onChange={handleChange}
+                checked={
+                  Object.values(contactData.skill).find(
+                    (word) => word === "css"
+                  )
+                    ? true
+                    : false
+                }
+              />{" "}
+              CSS
+              <input
+                type="checkbox"
+                name="skill"
+                value="js"
+                onChange={handleChange}
+                checked={
+                  Object.values(contactData.skill).find((word) => word === "js")
+                    ? true
+                    : false
+                }
+              />{" "}
+              JS
+              <input
+                type="checkbox"
+                name="skill"
+                value="react"
+                onChange={handleChange}
+                checked={Object.values(contactData.skill).includes("react")}
+              />{" "}
+              React
+            </div>
+
+            <div className="d-flex align-items-center justify-content-center">
               <label htmlFor="message">Message</label>
               <textarea
                 name="message"
                 id="message"
-                value={message}
-                onChange={(event) => setMessage(event.target.value)}
+                value={contactData.message}
+                onChange={handleChange}
                 placeholder="Enter your Message"
-                className="text-primary border-0 rounded mx-2 p-2 shadow my-2"
+                className="text-primary ms-2 border-0 rounded shadow p-2"
               ></textarea>
             </div>
-            <div className="d-flex align-items-center justify-content-center gap-3 mt-3">
+            <div>
               <button type="reset" className="btn btn-danger">
                 Clear Form
               </button>

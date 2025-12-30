@@ -38,6 +38,7 @@ const Contact = () => {
       setIsLoading(false);
     }
     handleClearForm();
+    _;
   };
 
   return (
