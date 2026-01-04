@@ -7,7 +7,7 @@ import { AiOutlineSwap } from "react-icons/ai";
 const Currency = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-  const [fromAmt, setFromAmt] = useState("");
+  const [fromAmt, setFromAmt] = useState("") ;
   const [toAmt, setToAmt] = useState("");
 
   const swap = () => {
