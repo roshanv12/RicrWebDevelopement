@@ -32,11 +32,15 @@ let result = console.log(Username.length);
 let message = "    hi, i am Roshan Vishwakarma      ";
 console.log(message);
 
-// trim() ka use ham extra space hatane ke liye karte hai ager starting se spase 
-// hatane ke liye ham trimStar() likhte hai , or end se spase hatane ke liye ham trimEnd() 
+// trim() ka use ham extra space hatane ke liye karte hai ager starting se spase
+// hatane ke liye ham trimStar() likhte hai , or end se spase hatane ke liye ham trimEnd()
 // likhte hai. or starting or end dono tarak se spase hatana ho to ham only time() likhte hai.
-
 
 console.log(message.toUpperCase().trim().toLowerCase());
 console.log(message.toLowerCase().trimEnd().trimStart());
-console.log(message.toUpperCase().trimStart())
+console.log(message.toUpperCase().trimStart());
+
+let collageStudents = "    Roshan Vishwakamra   ";
+let resultCollage = collageStudents.trim().toLowerCase()
+ console.log(resultCollage.toUpperCase());
+ 
