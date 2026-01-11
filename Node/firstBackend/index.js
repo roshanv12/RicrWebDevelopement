@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   console.log("Server is Running");
   res.json({ message: "Server is Running Sucessfully" });
 });
-
+12
 app.use((err, req, res, next) => {
   const ErrorMessage = err.message || "Internal Server Error";
   const statusCode = err.statusCode || 500;

@@ -92,5 +92,7 @@ let newAccountNo = `Last for digit in My Account no. ${accountNo} Hello Js ${int
 console.log(newAccountNo.toLowerCase());
 console.log(newAccountNo.toUpperCase());
 
+// truthy & falsy values in Js : falsy values :- NnN, undefined, 'amtyValue', Null, 0 . baki sari values truthy hoti hai.
 
 
+console.log(Boolean(100));

@@ -1,0 +1,21 @@
+import dotenv from "dotenv";
+dotenv.config();
+
+import express from "express";
+import connectDB from "./src/config/db.js";
+
+const app = express();
+
+app.use(express.json());
+
+// app.use("/auth", Authrouter);
+
+app.get("/", (req, res) => {
+  console.log("Server is Working");
+});
+
+const port = process.env.PROT || 5000;
+app.listen(port, () => {
+  console.log("server Started at Port:", port);
+});
+connectDB();
