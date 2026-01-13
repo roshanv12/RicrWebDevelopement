@@ -50,7 +50,7 @@
 // debugger
 
 // switch(true) {
-//     case userAge >= 0 && userAge <= 4:
+//     case (userAge >= 0 && userAge <= 4):
 //         console.log(`${username} is a kid.`)
 //         break
 //     case (userAge >= 5 && userAge <= 17):
@@ -91,13 +91,13 @@
 //     console.log('Please Enter a Valid Age');
 // }
 
-const grade = "A";
+const grade = "a";
 
-debugger;
+// debugger;
 switch (grade.toLocaleLowerCase()) {
   case "a":
     console.log("Your score is between 85% to 100%.");
-    break;
+   
   case 1:
     console.log("Your score is between 75% to 85%");
     break;

@@ -2,20 +2,30 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import express from "express";
+import cors from "cors"
 import connectDB from "./src/config/db.js";
+import AuthRouter from "./src/routers/authRouter.js";
+import morgan from "morgan";
 
 const app = express();
 
 app.use(express.json());
+app.use(morgan("dev"))
 
-// app.use("/auth", Authrouter);
+app.use("/auth", AuthRouter);
 
 app.get("/", (req, res) => {
   console.log("Server is Working");
 });
 
+app.use((err, req, res, next) => {
+  const ErrorMessage = err.message || "Internal Server Error";
+  const StatusCode = err.StatusCode || 500;
+
+  res.status(StatusCode).json({ message: ErrorMessage });
+});
 const port = process.env.PROT || 5000;
 app.listen(port, () => {
   console.log("server Started at Port:", port);
+  connectDB();
 });
-connectDB();
