@@ -5,6 +5,7 @@ export const UserRegister = async (req, res, next) => {
   try {
     //accept data from Frontend
     const { fullName, email, mobileNumber, password } = req.body;
+   
 
     if (!fullName || !email || !mobileNumber || !password) {
       const error = new Error("All feilds requied");
@@ -20,6 +21,8 @@ export const UserRegister = async (req, res, next) => {
       return next(error);
     }
 
+    
+
     //encrypt th password
 
     const salt = await bcrypt.genSalt(10);
@@ -27,7 +30,7 @@ export const UserRegister = async (req, res, next) => {
 
     //save data to database
 
-    const newUser = await User.creat({
+    const newUser = await User.create({
       fullName,
       email,
       mobileNumber,
@@ -55,7 +58,7 @@ export const UserLogin = async (req, res, next) => {
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
       const error = new Error("Email not registered");
-      error.statusCode = 402;
+      error.statusCode = 401;
       return next(error);
     }
 
@@ -63,7 +66,7 @@ export const UserLogin = async (req, res, next) => {
     const isVerified = await bcrypt.compare(password, existingUser.password);
     if (!isVerified) {
       const error = new Error("Password didn't match");
-      error.statusCode = 402;
+      error.statusCode = 401;
       return next(error);
     }
 
