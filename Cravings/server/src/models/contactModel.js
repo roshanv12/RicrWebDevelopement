@@ -10,11 +10,11 @@ const contactSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    mobile: {
+    mobileNumber: {
       type: String,
       required: true,
     },
-    password: {
+    message: {
       type: String,
       required: true,
     },

@@ -7,7 +7,7 @@ const Contact = () => {
     fullName: "",
     email: "",
     mobileNumber: "",
-    message:"",
+    message: "",
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,47 +21,13 @@ const Contact = () => {
       fullName: "",
       email: "",
       mobileNumber: "",
-      message:"",
+      message: "",
     });
   };
-
-  // const validate = () => {
-  //   let Error = {};
-
-  //   if (formData.fullName.length < 3) {
-  //     Error.fullName = "Name should be More Than 3 Characters";
-  //   } else {
-  //     if (!/^[A-Za-z ]+$/.test(formData.fullName)) {
-  //       Error.fullName = "Only Contain A-Z , a-z and space";
-  //     }
-  //   }
-
-  //   if (
-  //     !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(
-  //       formData.email
-  //     )
-  //   ) {
-  //     Error.email = "Use Proper Email Format";
-  //   }
-
-  //   if (!/^[6-9]\d{9}$/.test(formData.mobileNumber)) {
-  //     Error.mobileNumber = "Only Indian Mobile Number allowed";
-  //   }
-
-  //   setValidationError(Error);
-
-  //   return Object.keys(Error).length > 0 ? false : true;
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-
-    // if (!validate()) {
-    //   setIsLoading(false);
-    //   toast.error("Fill the Form Correctly");
-    //   return;
-    // }
 
     try {
       const res = await api.post("/public/new-contact", formData);
@@ -81,9 +47,7 @@ const Contact = () => {
         <div className="max-w-xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">
-              Post your 
-            </h1>
+            <h1 className="text-4xl font-bold text-gray-900 mb-2">Post your</h1>
             <p className="text-lg text-gray-600">
               You are 1 step away to stop your Cavings
             </p>
@@ -110,7 +74,6 @@ const Contact = () => {
                       disabled={isLoading}
                       className="w-full h-fit px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition disabled:cusrsor-not-allowed disabled-border-r-gray-200"
                     />
-                    
                   </div>
                   <input
                     type="email"
@@ -133,16 +96,7 @@ const Contact = () => {
                     disabled={isLoading}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition disabled:cusrsor-not-allowed disabled-border-r-gray-200"
                   />
-                  {/* <input
-                    type="password"
-                    name="password"
-                    value={formData.password}
-                    placeholder="Create Password"
-                    onChange={handleChange}
-                    required
-                    disabled={isLoading}
-                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 transition disabled:cusrsor-not-allowed disabled-border-r-gray-200"
-                  /> */}
+
                   <textarea
                     // type="text"
                     name="message"

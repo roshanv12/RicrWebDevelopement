@@ -5,7 +5,6 @@ export const UserRegister = async (req, res, next) => {
   try {
     //accept data from Frontend
     const { fullName, email, mobileNumber, password } = req.body;
-   
 
     if (!fullName || !email || !mobileNumber || !password) {
       const error = new Error("All feilds requied");
@@ -20,8 +19,6 @@ export const UserRegister = async (req, res, next) => {
       error.cause.statusCode = 409;
       return next(error);
     }
-
-    
 
     //encrypt th password
 
