@@ -1,25 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import UserSideBar from "../../components/userDashboard/UserSideBar";
+import UserOverview from "../../components/userDashboard/userOverview";
 import UserProfile from "../../components/userDashboard/UserProfile";
-import UserTransaction from "../../components/userDashboard/UserTransaction";
-import UserHelpDesk from "../../components/userDashboard/UserHelpDesk";
 import UserOrders from "../../components/userDashboard/UserOrders";
-import UserSideBar from "../../components/userDashboard/UserSideBar";
+import UserTransactions from "../../components/userDashboard/UserTransaction";
+import UserHelpDesk from "../../components/userDashboard/UserHelpDesk";
 
 const UserDashboard = () => {
-  const [active, setActive] = userState("overview");
+  const [active, setActive] = useState("overview");
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   return (
     <>
-      <div className="w-full flex h-[90vh]">
-        <div className="bg-(--color-backround) w-2/10">
-          <UserSideBar active={active} setActive={setActive} />
+      <div className="w-full h-[90vh] flex">
+        <div
+          className={`bg-(--color-background) duration-300 ${isCollapsed ? "w-2/60" : "w-12/60"}`}
+        >
+          <UserSideBar
+            active={active}
+            setActive={setActive}
+            isCollapsed={isCollapsed}
+            setIsCollapsed={setIsCollapsed}
+          />
         </div>
-        <div className="border border-amber-700 w-8/10">
-          {active === "overview" && <UserOverview />}
-          {active === "profile" && <UserProfile />}
-          {active === "orders" && <UserOrders />}
-          {active === "transaction" && <UserTransaction />}
-          {active === "helpdesk" && <UserHelpDesk />}
+        <div className={`${isCollapsed ? "w-58/60" : "w-48/60"} duration-300`}>
+          {active === "overview" && <UserOverview />},
+          {active === "profile" && <UserProfile />},
+          {active === "orders" && <UserOrders />},
+          {active === "transactions" && <UserTransactions />},
+          {active === "helpdesk" && <UserHelpDesk />},
         </div>
       </div>
     </>
