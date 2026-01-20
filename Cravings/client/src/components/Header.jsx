@@ -17,7 +17,7 @@ const Header = () => {
             className="h-12 w-20 object-cover invert-100"
           />
         </Link>
-        <div className="flex gap-4">
+        <div className="flex gap-4" >
           <Link
             to={"/"}
             className="text-decoration-none text-white hover:text-(--color-accent)"
