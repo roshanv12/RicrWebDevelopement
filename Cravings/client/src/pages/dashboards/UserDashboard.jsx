@@ -24,11 +24,11 @@ const UserDashboard = () => {
           />
         </div>
         <div className={`${isCollapsed ? "w-58/60" : "w-48/60"} duration-300`}>
-          {active === "overview" && <UserOverview />},
-          {active === "profile" && <UserProfile />},
-          {active === "orders" && <UserOrders />},
-          {active === "transactions" && <UserTransactions />},
-          {active === "helpdesk" && <UserHelpDesk />},
+          {active === "overview" && <UserOverview />}
+          {active === "profile" && <UserProfile />}
+          {active === "orders" && <UserOrders />}
+          {active === "transactions" && <UserTransactions />}
+          {active === "helpdesk" && <UserHelpDesk />}
         </div>
       </div>
     </>

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 const AuthContext = React.createContext();
 
 export const AuthProvider = (props) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState("");
   const [isLogin, setIsLogin] = useState(!!user);
 
   useEffect(() => {
