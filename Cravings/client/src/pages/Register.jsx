@@ -41,7 +41,7 @@ const Register = () => {
 
     if (
       !/^[\w\.]+@(gmail|outlook|ricr|yahoo)\.(com|in|co.in)$/.test(
-        formData.email
+        formData.email,
       )
     ) {
       Error.email = "Use Proper Email Format";
@@ -102,6 +102,39 @@ const Register = () => {
               {/* Personal Information */}
               <div className="mb-10">
                 <div className="space-y-4">
+                  <div  className="flex items-center justify-around">
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="role"
+                        id="manager"
+                        checked={formData.role === "manager"}
+                      />
+                      <label htmlFor="manager"> Resturant Manager</label>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="role"
+                        id="manager"
+                        checked={formData.role === "manager"}
+                        onChange={handleChange}
+                      />
+                      <label htmlFor="manager"> Resturant Manager</label>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="radio"
+                        name="role"
+                        id="manager"
+                        checked={formData.role === "manager"}
+                        onChange={handleChange}
+                      />
+                      <label htmlFor="manager"> Resturant Manager</label>
+                    </div>
+                  </div>
                   <div>
                     <input
                       type="text"
