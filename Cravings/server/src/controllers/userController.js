@@ -4,10 +4,10 @@ export const UserUpdate = async (req, res, next) => {
   try {
     //logic here
 
-    const { fullName, email, mobileNumber ,role} = req.body;
+    const { fullName, email, mobileNumber } = req.body;
     const currentUser = req.user;
 
-    if (!fullName || !email || !mobileNumber || !role) {
+    if (!fullName || !email || !mobileNumber) {
       const error = new Error("All Feilds Required");
       error.statusCode = 400;
       return next(error);
@@ -30,7 +30,6 @@ export const UserUpdate = async (req, res, next) => {
         fullName,
         email,
         mobileNumber,
-        role,
       },
       { new: true },
     );
@@ -41,6 +40,18 @@ export const UserUpdate = async (req, res, next) => {
       .json({ message: "User Updated Sucessfully", data: updatedUser });
 
     console.log("Updating the user");
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const UserChangePhoto = async (req, res, next) => {
+  try {
+    console.log("body: ", req.body);
+
+    console.log("file:", req.file);
+
+    res.status(200).json({ message: "Photo Updated" });
   } catch (error) {
     next(error);
   }

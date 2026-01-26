@@ -4,38 +4,51 @@ import { genToken } from "../utils/authToken.js";
 
 export const UserRegister = async (req, res, next) => {
   try {
+    console.log(req.body);
     //accept data from Frontend
-    const { fullName, email, mobileNumber, password } = req.body;
+    const { fullName, email, mobileNumber, password, role } = req.body;
 
-    if (!fullName || !email || !mobileNumber || !password) {
-      const error = new Error("All feilds requied");
+    //verify that all data exist
+    if (!fullName || !email || !mobileNumber || !password || !role) {
+      const error = new Error("All feilds required");
       error.statusCode = 400;
       return next(error);
     }
 
-    // check for dupl
+    console.log({ fullName, email, mobileNumber, password });
+
+    //Check for duplaicate user before registration
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       const error = new Error("Email already registered");
-      error.cause.statusCode = 409;
+      error.statusCode = 409;
       return next(error);
     }
 
-    //encrypt th password
+    console.log("Sending Data to DB");
 
+    //encrypt the password
     const salt = await bcrypt.genSalt(10);
     const hashPassword = await bcrypt.hash(password, salt);
 
-    //save data to database
+    console.log("Password Hashing Done. hashPassword = ", hashPassword);
 
+    const photoURL = `https://placehold.co/600x400?text=${fullName.charAt(0).toUpperCase()}`;
+    const photo = {
+      url: photoURL,
+    };
+
+    //save data to database
     const newUser = await User.create({
       fullName,
-      email,
+      email: email.toLowerCase(),
       mobileNumber,
       password: hashPassword,
+      role,
+      photo,
     });
 
-    // send responese to frontend
+    // send response to Frontend
     console.log(newUser);
     res.status(201).json({ message: "Registration Successfull" });
     //End
@@ -43,16 +56,20 @@ export const UserRegister = async (req, res, next) => {
     next(error);
   }
 };
+
 export const UserLogin = async (req, res, next) => {
   try {
+    //Fetch Data from Frontend
     const { email, password } = req.body;
+
+    //verify that all data exist
     if (!email || !password) {
-      const error = new Error("All feilds requied");
+      const error = new Error("All feilds required");
       error.statusCode = 400;
       return next(error);
     }
 
-    //check if user is registerd or not
+    //Check if user is registred or not
     const existingUser = await User.findOne({ email });
     if (!existingUser) {
       const error = new Error("Email not registered");
@@ -60,7 +77,7 @@ export const UserLogin = async (req, res, next) => {
       return next(error);
     }
 
-    //verify the password
+    //verify the Password
     const isVerified = await bcrypt.compare(password, existingUser.password);
     if (!isVerified) {
       const error = new Error("Password didn't match");
@@ -68,22 +85,20 @@ export const UserLogin = async (req, res, next) => {
       return next(error);
     }
 
-
-    // Token Generation will be done here
-
-     genToken(existingUser,res);
-
-
+    //Token Generation will be done here
+    genToken(existingUser, res);
 
     //send message to Frontend
-    res.status(200).json({ message: `login Successfull`, data: existingUser });
+    res.status(200).json({ message: "Login Successfull", data: existingUser });
     //End
   } catch (error) {
     next(error);
   }
 };
+
 export const UserLogout = async (req, res, next) => {
   try {
+    res.clearCookie("parleG");
     res.status(200).json({ message: "Logout Successfull" });
   } catch (error) {
     next(error);
