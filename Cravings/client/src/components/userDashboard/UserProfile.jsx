@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import EditProfileModal from "./modals/EditProfileModal";
-import UserImage from "../../assets/userImage.jpg";
+import UserImage from "../../assets/UserImage.jpg";
 import { FaCamera } from "react-icons/fa";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
@@ -84,7 +84,7 @@ const UserProfile = () => {
               Edit
             </button>
             <button className="px-4 py-2 rounded bg-(--color-secondary) text-white">
-              Reset
+              Reset password
             </button>
           </div>
         </div>
