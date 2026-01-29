@@ -1,6 +1,6 @@
+import cloudinary from "../config/cloudinary.js";
 import User from "../models/userModel.js";
-import User from "../";
-import cloudinary from "../config/Cloudinary.js";
+
 export const UserUpdate = async (req, res, next) => {
   try {
     //logic here
@@ -15,15 +15,6 @@ export const UserUpdate = async (req, res, next) => {
     }
 
     console.log("OldData: ", currentUser); //old user data in JSON format
-    //first Way
-    // currentUser.fullName = fullName;
-    // currentUser.email = email;
-    // currentUser.mobileNumber = mobileNumber;
-    // await currentUser.save();
-
-    // console.log("NewData:", currentUser);
-
-    //Second Way
 
     const updatedUser = await User.findByIdAndUpdate(
       { _id: currentUser._id },
@@ -48,8 +39,11 @@ export const UserUpdate = async (req, res, next) => {
 
 export const UserChangePhoto = async (req, res, next) => {
   try {
+    // console.log("body: ", req.body);
     const currentUser = req.user;
     const dp = req.file;
+
+    console.log("request file: ", req.file);
 
     if (!dp) {
       const error = new Error("Profile Picture required");
@@ -57,27 +51,27 @@ export const UserChangePhoto = async (req, res, next) => {
       return next(error);
     }
 
-    console.log(dp);
+    console.log("DP:", dp);
 
     if (currentUser.photo.publicID) {
-      await cloudinary.uploader.destroy(currentUser.photo.publiID);
+      await cloudinary.uploader.destroy(currentUser.photo.publicID);
     }
 
     const b64 = Buffer.from(dp.buffer).toString("base64");
-    console.log(b64.slice(0, 100));
+    // console.log(b64.slice(0,100));
     const dataURI = `data:${dp.mimetype};base64,${b64}`;
-    console.log(("DataURI", dataURI.slice(0, 100)));
+    console.log("DataURI", dataURI.slice(0, 100));
 
-    const result = await cloudinary.uploader.uploader(dataURI, {
-      folder: "Cravings/user",
+    const result = await cloudinary.uploader.upload(dataURI, {
+      folder: "Cravings/User",
       width: 500,
       height: 500,
       crop: "fill",
     });
 
-    console.log("Image Uplaoded successfully: ",result)
+    console.log("Image Uplaoded successfully: ", result);
     currentUser.photo.url = result.secure_url;
-    currentUser.photo.publiID=result.pulic_id;
+    currentUser.photo.publicID = result.public_id;
 
     await currentUser.save();
 

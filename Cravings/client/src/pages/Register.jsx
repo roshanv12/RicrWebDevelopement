@@ -59,7 +59,7 @@ const Register = () => {
     }
 
     setValidationError(Error);
-
+    s;
     return Object.keys(Error).length > 0 ? false : true;
   };
 

@@ -2,26 +2,52 @@ import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import EditProfileModal from "./modals/EditProfileModal";
 import UserImage from "../../assets/UserImage.jpg";
-import { FaCamera } from "react-icons/fa";
+import { FaCamera, FaCity } from "react-icons/fa";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
 
 const UserProfile = () => {
-  const { user } = useAuth();
+  const { user, setUser } = useAuth();
   const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
-  const [preview, setPreview] = useState("");
-  const [photo, setPhoto] = useState("");
+  const [preview, setPreview] = useState({
+    fullName: user.fullName,
+    email: user.email,
+    mobileNumber: user.mobileNumber,
+    gender: user.gender,
+    dob: user.dob,
+    address: user.address,
+    city: user.city,
+    pin: user.pin,
+    document: {
+      uidai: "N/A",
+      pan: "N/A",
+    },
+    paymentDetails: {
+      upi: "N/A",
+      account_number: "N/A",
+      ifs_Code: "N/A",
+    },
+    Geolocation: {
+      lat: "N/A",
+      lon: "N/A",
+    },
+  });
 
-  const changePhoto = async () => {
+  const changePhoto = async (photo) => {
     const form_Data = new FormData();
 
+    // console.log("Printing photo", photo);
+
     form_Data.append("image", photo);
-    form_Data.append("imageURL", preview);
+    // form_Data.append("imageURL", preview);
 
     try {
       const res = await api.patch("/user/changePhoto", form_Data);
 
       toast.success(res.data.message);
+
+      setUser(res.data.data);
+      sessionStorage.setItem("CravingUser", JSON.stringify(res.data.data));
     } catch (error) {
       toast.error(error?.response?.data?.message || "Unknown Error");
     }
@@ -30,12 +56,9 @@ const UserProfile = () => {
   const handlePhotoChange = (e) => {
     const file = e.target.files[0];
     const newPhotoURL = URL.createObjectURL(file);
-    //console.log(newPhotoURL);
+    console.log(newPhotoURL);
     setPreview(newPhotoURL);
-    setTimeout(() => {
-      setPhoto(file);
-      changePhoto();
-    }, 5000);
+    changePhoto(file);
   };
 
   return (
