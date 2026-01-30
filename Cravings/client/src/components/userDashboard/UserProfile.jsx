@@ -1,37 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import EditProfileModal from "./modals/EditProfileModal";
-import UserImage from "../../assets/UserImage.jpg";
-import { FaCamera, FaCity } from "react-icons/fa";
+import UserImage from "../../assets/userImage.jpg";
+import { FaCamera } from "react-icons/fa";
 import api from "../../config/Api";
 import toast from "react-hot-toast";
 
 const UserProfile = () => {
   const { user, setUser } = useAuth();
+  console.log(user);
+
   const [isEditProfileModalOpen, setIsEditProfileModalOpen] = useState(false);
-  const [preview, setPreview] = useState({
-    fullName: user.fullName,
-    email: user.email,
-    mobileNumber: user.mobileNumber,
-    gender: user.gender,
-    dob: user.dob,
-    address: user.address,
-    city: user.city,
-    pin: user.pin,
-    document: {
-      uidai: "N/A",
-      pan: "N/A",
-    },
-    paymentDetails: {
-      upi: "N/A",
-      account_number: "N/A",
-      ifs_Code: "N/A",
-    },
-    Geolocation: {
-      lat: "N/A",
-      lon: "N/A",
-    },
-  });
+  const [preview, setPreview] = useState("");
 
   const changePhoto = async (photo) => {
     const form_Data = new FormData();
@@ -58,7 +38,9 @@ const UserProfile = () => {
     const newPhotoURL = URL.createObjectURL(file);
     console.log(newPhotoURL);
     setPreview(newPhotoURL);
-    changePhoto(file);
+    setTimeout(() => {
+      changePhoto(file);
+    }, 5000);
   };
 
   return (
@@ -92,18 +74,21 @@ const UserProfile = () => {
             </div>
             <div>
               <div className="text-3xl text-(--color-primary) font-bold">
-                {user.fullName}
+                {user.fullName || "User Name"}
               </div>
               <div className="text-gray-600 text-lg font-semibold">
-                {user.email}
+                {user.email || "user@example.com"}
               </div>
               <div className="text-gray-600 text-lg font-semibold">
-                {user.mobileNumber}
+                {user.mobileNumber || "XXXXXXXXXX"}
               </div>
             </div>
           </div>
           <div className="flex flex-col gap-2">
-            <button className="px-4 py-2 rounded bg-(--color-secondary) text-white">
+            <button
+              className="px-4 py-2 rounded bg-(--color-secondary) text-white"
+              onClick={() => setIsEditProfileModalOpen(true)}
+            >
               Edit
             </button>
             <button className="px-4 py-2 rounded bg-(--color-secondary) text-white">
