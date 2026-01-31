@@ -9,6 +9,8 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const [isForgetPasswordModelOpen, setIsForgetPasswordModelOpen]
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -146,6 +148,11 @@ const Login = () => {
           </p>
         </div>
       </div>
+      {
+        isForgetPasswordModelOpen && (
+          < />
+        )
+      }
     </>
   );
 };

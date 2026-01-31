@@ -104,3 +104,9 @@ export const UserLogout = async (req, res, next) => {
     next(error);
   }
 };
+
+//today class 
+
+export const User = async (req, res, next) => {
+  
+};
