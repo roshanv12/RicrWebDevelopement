@@ -3,7 +3,6 @@ import toast from "react-hot-toast";
 import api from "../config/Api";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import ForgetPasswordModal from "../components/publicModels/ForgetPasswordModel";
 
 const Login = () => {
   const { setUser, setIsLogin, setRole } = useAuth();
@@ -45,7 +44,7 @@ const Login = () => {
       handleClearForm();
       switch (res.data.data.role) {
         case "manager": {
-          setRole("manager"); 
+          setRole("manager");
           navigate("/resturant-dashboard");
           break;
         }
@@ -76,6 +75,14 @@ const Login = () => {
     }
   };
 
+  if (isLoading) {
+    return (
+      <div className="w-100 h-100 flex items-center justify-center">
+        <Loading />
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 py-6 px-4">
@@ -98,7 +105,7 @@ const Login = () => {
               className="p-8"
             >
               {/* Personal Information */}
-              <div className="mb-10">
+              <div className="mb-5">
                 <div className="space-y-4">
                   <input
                     type="email"
@@ -115,7 +122,7 @@ const Login = () => {
                     type="password"
                     name="password"
                     value={formData.password}
-                    placeholder="Create Password"
+                    placeholder="Password"
                     onChange={handleChange}
                     required
                     disabled={isLoading}
@@ -161,9 +168,10 @@ const Login = () => {
           </p>
         </div>
       </div>
+
       {isForgetPasswordModelOpen && (
         <ForgetPasswordModal
-          onClose={() => setIsForgetPasswordModelOpen(true)}
+          onClose={() => setIsForgetPasswordModelOpen(false)}
         />
       )}
     </>
