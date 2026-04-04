@@ -6,7 +6,7 @@
 .blueContainer{
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    background-color:gainsboro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@
     margin-top: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 1px 1px 20px black;
+    box-shadow: 5px 4px 40px black;
 }
 .mainHeading{
     margin-left: 30px;
@@ -47,7 +47,7 @@
     button{
         width: 300px;
         height: 40px;
-        background-color: blue;
+        background-color:blueviolet;
         color: white;
         border: none;
         border-radius: 25px;
