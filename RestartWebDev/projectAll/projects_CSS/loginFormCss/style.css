@@ -1,0 +1,24 @@
+#perantdiv {
+  margin: auto;
+  width: auto;
+  width: 80%;
+  height: 80%;
+  border: solid black 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+}
+
+#blue-container {
+  margin: 50px;
+  padding: 50px;
+  max-width: 200px;
+  min-height: 100px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
