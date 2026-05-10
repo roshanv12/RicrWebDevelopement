@@ -1,0 +1,10 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+.container {
+  border: solid black 2px;
+  max-width: 500px;
+  min-height: 500px;
+}

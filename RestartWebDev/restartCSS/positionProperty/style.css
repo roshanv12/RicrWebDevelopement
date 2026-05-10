@@ -1,0 +1,15 @@
+/* Position Property in css */
+
+img {
+  max-width: 200px;
+
+  margin: 10px;
+}
+div {
+  border: solid black 3px;
+}
+.img1 {
+  position: relative;
+  top: 20px;
+  left: 30px;
+}
