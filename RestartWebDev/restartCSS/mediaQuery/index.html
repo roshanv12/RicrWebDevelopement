@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <style>
+      .container {
+        max-width: 500ox;
+        height: 500px;
+        background-color: aqua;
+        border: 2px black solid;
+        font-size: 2rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* destop-first design */
+
+      /* @media (max-width: 1200px) {
+        .container {
+            width: 400px;
+            height: 400px;
+            font-size: 3rem;
+            background-color: red;
+        }
+      }
+      @media (max-width: 900px) {
+        .container {
+            width: 300px;
+            height: 300px;
+            font-size: 2rem;
+            background-color: blueviolet;
+        }
+      } */
+
+      /* Mobile-first design */
+
+      @media (min-width: 600px) {
+        .container {
+          max-width: 600px;
+          height: 600px;
+          font-size: 4rem;
+          background-color: chartreuse;
+        }
+      }
+      @media (min-width: 900px) {
+        .container {
+          max-width: 700px;
+          height: 700px;
+          font-size: 6rem;
+          background-color: blueviolet;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 750px;
+          height: 750px;
+          font-size: 7rem;
+          background-color: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">Media Query</div>
+  </body>
+</html>
