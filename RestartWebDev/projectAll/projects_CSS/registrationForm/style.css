@@ -123,6 +123,7 @@ input:not([type="checkbox"]) {
   font-size: medium;
   font-weight: 500;
   border: solid gray 1px;
+  transition: 0.3s;
 }
 button:hover {
   background-color: white;
