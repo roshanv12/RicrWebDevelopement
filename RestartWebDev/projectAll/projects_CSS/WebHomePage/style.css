@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* width: 100vw;
+    max-width: 1200px; */
+    height: 100vh;
+    background-image: url("Full-hd-nature-wallpapers-1080p.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
