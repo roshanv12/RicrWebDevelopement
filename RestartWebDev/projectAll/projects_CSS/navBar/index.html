@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive NavBar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Strichpunkt+Sans:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Strichpunkt Sans", sans-serif;
+        font-style: normal;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .mainContainer {
+        margin: 0 auto;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        padding: 20px;
+        box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.06);
+      }
+
+      .navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      span {
+        width: 100%;
+        max-width: 40%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      span a {
+        font-size: 20px;
+        font-weight: 450;
+      }
+
+      span a:hover {
+        color: gray;
+      }
+
+      @media (max-width: 800px) {
+        span {
+          flex-direction: column;
+        }
+      }
+
+      .Logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-shadow: -1px 1px 0 #000;
+      }
+      .Logo:hover {
+        opacity: 80%;
+      }
+
+      .loginBtn {
+        border-radius: 5px;
+        padding: 10px 25px;
+        background-color: black;
+        color: whitesmoke;
+        font-size: large;
+        font-weight: 500;
+        box-shadow: 0px 0px 5px 1px gray;
+
+        transition: all 0.5s ease;
+        cursor: pointer;
+      }
+      .loginBtn:hover {
+        background-color: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainContainer">
+      <nav class="navBar">
+        <a href="#Logo" class="Logo">MyWebside</a>
+        <span
+          ><a href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#Contact">Contact</a>
+          <a href="#Course">Course</a>
+        </span>
+        <a href="#Button" class="loginBtn">Log in</a>
+      </nav>
+    </div>
+  </body>
+</html>

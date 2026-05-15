@@ -118,12 +118,17 @@
         gap: 8px;
       }
 
+      .checkboxlable {
+        cursor: pointer;
+      }
+
       .buttonbox {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
+        /* cursor: pointer; */
       }
 
       .buttonbox button {
@@ -136,6 +141,7 @@
         font-size: medium;
         font-weight: 500;
         border: solid gray 1px;
+        cursor: pointer;
       }
       button:hover {
         background-color: white;
@@ -191,7 +197,9 @@
 
         <div class="checkboxDiv">
           <input type="checkbox" name="checkbox" id="checkbox" />
-          <label for="checkbox"> accept all terms & conditions</label>
+          <label for="checkbox" class="checkboxlable">
+            accept all terms & conditions</label
+          >
         </div>
 
         <div class="buttonbox">
