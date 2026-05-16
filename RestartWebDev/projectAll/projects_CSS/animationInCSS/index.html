@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amimation in CSS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: #0a0a0a;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .container {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(140, 140, 213);
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px 2px gray;
+
+        position: absolute;
+        animation-name: CircleAnimation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+
+        background-image: url("OIP.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      @keyframes CircleAnimation {
+        0% {
+          top: 0;
+          left: 0;
+          background-color: red;
+          transform: rotate(0deg);
+        }
+        25% {
+          top: 0;
+          left: calc(100vw - 240px);
+          transform: rotate(180deg);
+          background-color: yellow;
+          transform: rotate(180deg);
+        }
+        50% {
+          top: calc(100vh - 240px);
+          left: calc(100vw - 240px);
+          background-color: pink;
+          transform: rotate(360deg);
+        }
+        75% {
+          top: calc(100vh - 240px);
+          left: 0;
+          background-color: blueviolet;
+          transform: rotate(540deg);
+        }
+        100% {
+          top: 0;
+          left: 0;
+          background-color: blue;
+          transform: rotate(720deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

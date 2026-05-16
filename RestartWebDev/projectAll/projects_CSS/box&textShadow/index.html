@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shadow</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100vw;
+        min-height: 100vh;
+        background-color: beige;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-image: url("2109.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .childContainer {
+        width: 100%;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: absolute;
+        margin: 20px;
+
+        background-color: white;
+        background-image: url("MyPic.jpg");
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        box-shadow:
+          0px 0px 10px 5px white,
+          0px 0px 15px 15px black;
+
+        animation-name: imgmoving;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes imgmoving {
+        from {
+          top: 0px;
+        }
+        to {
+          top: 20px;
+          box-shadow: 0px 0px 45px 5px greenyellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="childContainer"></div>
+    </div>
+  </body>
+</html>
