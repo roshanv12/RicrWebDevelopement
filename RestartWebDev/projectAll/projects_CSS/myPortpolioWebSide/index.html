@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portpolio Webside</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #1e1e1e;
+        color: #a0a0a0;
+      }
+
+      /* main-container */
+
+      .main-container {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: 40px;
+        padding-top: 40px;
+        margin: auto;
+      }
+
+      /* sidebar  */
+
+      .sidebar {
+        height: 90vh;
+        background-color: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 10px;
+        padding: 40px;
+      }
+      .main-content {
+        height: 90vh;
+        background-color: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 15px;
+      }
+
+      @media (max-width: 900px) {
+        .main-container {
+          grid-template-columns: 1fr;
+          padding: 20px;
+        }
+
+        .sidebar,
+        .main-content {
+          height: auto;
+        }
+      }
+
+      /* Profile section */
+
+      .profile {
+        text-align: center;
+      }
+      .profile img {
+        width: 120px;
+        height: 120px;
+        border: 2px solid gray;
+        border-radius: 50%;
+
+        box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.502);
+        animation: imgCircle 1s linear infinite alternate-reverse;
+      }
+      @keyframes imgCircle {
+        from {
+          box-shadow: 0px 0px 15px 5px rgba(128, 128, 128, 0.703);
+        }
+        to {
+          box-shadow: 0px 0px 15px 5px #ffbf00;
+        }
+      }
+      .profile h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 20px;
+      }
+      .profile p {
+        background-color: #1e1e1e;
+        padding: 5px 15px;
+        color: #ffbf00;
+        border: 1px solid #3a3a3a;
+        font-size: 0.8rem;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 10px;
+      }
+
+      /* contact section */
+
+      .contact {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 2px solid #3a3a3a;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .label {
+        font-weight: 500;
+        font-size: 1.2rem;
+        color: #e0e0e0;
+        padding-bottom: 5px;
+      }
+      .value {
+        color: #a0a0a0;
+        text-decoration: none;
+      }
+      .email,
+      .phone {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- main-container -->
+
+    <div class="main-container">
+      <!-- sidebar -->
+
+      <div class="sidebar">
+        <!-- Profile -->
+
+        <div class="profile">
+          <img
+            src="/projectAll/projects_CSS/myPortpolioWebSide/image/WhatsApp Image 2025-11-11 at 09.15.40_31ff346c.jpg"
+            alt=""
+          />
+          <h2>Roshan Vishwakarma</h2>
+          <p>Frontend Developer</p>
+        </div>
+
+        <!-- contact-section -->
+
+        <div class="contact">
+          <div class="email">
+            <h3 class="label">Email</h3>
+            <a href="https://mail.google.com/mail/u/0/?ogbl#inbox" class="value"
+              >roshanvish5609@gmail.com</a
+            >
+          </div>
+          <div class="phone">
+            <h3 class="label">Phone</h3>
+            <a href="#tell.com" class="value">7999687475</a>
+          </div>
+          <div class="location">
+            <h3 class="label">Location</h3>
+            <p class="value">Rajiv nagar, Bhopal</p>
+          </div>
+        </div>
+        <div></div>
+      </div>
+
+      <!-- main-content -->
+      <div class="main-content"></div>
+    </div>
+  </body>
+</html>
