@@ -27,6 +27,9 @@ body {
 
 .main-header-container {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0px;
+  background-color: rgba(255, 255, 255, 0.643);
 }
 
 .header-content {
@@ -104,4 +107,114 @@ body {
   .menu-button {
     display: block;
   }
+}
+
+/* main-content-sectionOne */
+
+.main-content-sectionOne {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  gap: 50px;
+}
+
+/* left-container */
+
+.left-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: start;
+  margin-left: 2rem;
+}
+
+.para-one {
+  color: var(--link-color);
+  font-weight: bold;
+}
+
+.main-heading {
+  font-size: 3.5rem;
+  color: var(--text-color);
+}
+
+.para-tow {
+  color: var(--gray);
+}
+
+.button-div {
+  display: flex;
+  gap: 2rem;
+}
+
+.button-div button {
+  border: none;
+  border-radius: 0.37rem;
+
+  color: var(--background-color);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.button-div button:hover {
+  background-color: var(--accent-color);
+}
+
+.start-button {
+  background-color: var(--rimary-color);
+}
+
+.take-button {
+  background-color: var(--text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .main-content-sectionOne {
+    flex-direction: row;
+    max-width: 80vw;
+    text-align: center;
+  }
+
+  .left-container {
+    /* border: 2px solid black; */
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    text-align: start;
+
+    /* margin-left: 2rem; */
+  }
+  .img-container img {
+    max-width: 600px;
+    border-radius: 10%;
+    box-shadow: 0px 0px 5px 2px rgba(128, 128, 128, 0.537);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* right-container */
+
+.right-container {
+  /* border: 2px solid black; */
+  text-align: left;
+}
+
+.img-container img {
+  max-width: 100%;
+  /* overflow: hidden; */
+  margin: 2rem;
+  border-radius: 10px;
 }
