@@ -22,6 +22,12 @@
 body {
   width: 100vw;
   background-color: var(--background-color);
+  background-image: url(./image/5.webp);
+  
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed;
   text-align: center;
 }
 
