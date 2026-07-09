@@ -3,3 +3,5 @@ console.log("ljsdlfj");
 
 
 const heading = document.getElementsByClassName('heading')
+
+let tagall = document.getElementsByTagName('h1')
