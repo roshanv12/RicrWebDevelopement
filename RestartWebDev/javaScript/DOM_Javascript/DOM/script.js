@@ -39,7 +39,7 @@ let img = document.querySelector("img");
 img.src = "https://m.media-amazon.com/images/I/71oDTJru50L.jpg";
 console.dir(img);
 
-let img2 = document.getElementsByClassName("img2")[1]
+let img2 = document.getElementsByClassName("img2")[1];
 img2.src =
   "https://m.media-amazon.com/images/I/51pIGwRkGQL._AC_UF350,350_QL80_.jpg";
 
@@ -48,3 +48,14 @@ img2.src =
 // img2.src =
 //   "https://m.media-amazon.com/images/I/51pIGwRkGQL._AC_UF350,350_QL80_.jpg";
 // console.dir(img2);
+
+let MyImg = document.getElementById("MyImg");
+// MyImg.setAttribute("src", "https://static.vecteezy.com/system/resources/thumbnails/049/855/771/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg")
+MyImg.src =
+  "https://static.vecteezy.com/system/resources/thumbnails/049/855/771/small/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-free-photo.jpg";
+// console.log(MyImg)
+
+// MyImg.removeAttribute("src")
+
+console.log(MyImg.getAttribute("src"))
+
