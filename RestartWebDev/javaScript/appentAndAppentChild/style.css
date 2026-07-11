@@ -1,0 +1,22 @@
+.main-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+
+.child-container {
+  color: white;
+  font-size: 5rem;
+  width: 150px;
+  min-height: 250px;
+  background-color: blue;
+  border-radius: 10px;
+  font-family: cursive;
+  /* margin: auto; */
+  font-family: 600;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
