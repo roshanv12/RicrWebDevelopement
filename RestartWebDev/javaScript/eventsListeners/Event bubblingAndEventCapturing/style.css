@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.greenBox {
+  width: 350px;
+  height: 300px;
+  margin: 0 auto;
+  border: 2px solid black;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pinkBox {
+  width: 250px;
+  height: 200px;
+  margin: 0 auto;
+  border: 2px solid black;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blueBox {
+  width: 150px;
+  height: 100px;
+  margin: 0 auto;
+  border: 2px solid black;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
