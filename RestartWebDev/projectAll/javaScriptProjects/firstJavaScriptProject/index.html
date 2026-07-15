@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First JavaScript Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
-    />
+    /> -->
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -23,10 +28,28 @@
         </div>
         <p class="progress-lebel">Raise the bar by completing your goals!</p>
         <div class="progress-ber">
-            <div class="progress-value">
-                roshan
-            </div>
+          <div class="progress-value">roshan</div>
         </div>
+        <p class="error">Please set all the 3 goals!</p>
+        <div class="goal-container">
+          <div class="custom-checkBox"></div>
+          <input type="text" class="goal-input" placeholder="Add new goal..." />
+        </div>
+        <div class="goal-container">
+          <div class="custom-checkBox">
+            <!-- <img src="./images/Tick-icon(8).jpeg" alt=""> -->
+            <!-- <i class="fa-solid fa-check"></i> -->
+          </div>
+          <input type="text" class="goal-input" placeholder="Add new goal..." />
+        </div>
+        <div class="goal-container">
+          <div class="custom-checkBox"></div>
+          <input type="text" class="goal-input" placeholder="Add new goal..." />
+        </div>
+
+        <p class="quote">“Move one step ahead, today!”</p>
+
+        <p class="made-width">Made with ❤️ by Roshan Vishwakarma</p>
       </div>
     </main>
   </body>
