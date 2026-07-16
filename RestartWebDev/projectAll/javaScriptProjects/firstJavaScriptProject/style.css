@@ -93,6 +93,7 @@ main {
   font-weight: 400;
   margin-block: 20px;
   /* margin-top: 22px; */
+  display: none;
 }
 
 .goal-container {
@@ -102,6 +103,7 @@ main {
   display: flex;
   align-items: center;
   padding: 0 22px;
+  margin-top: 1rem;
   /* gap: 22px; */
   background-color: #ffffff;
   margin-bottom: 42px;
@@ -117,6 +119,7 @@ main {
   /* flex-grow: 1; */
   width: 100%;
   height: 100%;
+  
 }
 
 input::placeholder {
@@ -133,23 +136,33 @@ input::placeholder {
   flex-shrink: 0;
   cursor: pointer;
 
-  /* CHAT-GPT */
-
-  /* width: 24px;
-  height: 24px;
-  border: 2px solid #858585;
-  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: #48a300;
-  color: white; */
+  justify-content: center;
+
 }
 
-/* .custom-checkBox i {
+.custom-checkBox i {
+ color: #48a300;
+  font-size: 24px;
+  display: none;
+}
+
+.custom-checkBox i.show {
   display: block;
-  
-} */
+}
+
+
+
+.completed {
+  color: #48a300;
+  text-decoration-line: line-through;
+}
+
+.completed .goal-input  {
+  color: #48a300;
+
+}
 
 .quote {
   text-align: center;
