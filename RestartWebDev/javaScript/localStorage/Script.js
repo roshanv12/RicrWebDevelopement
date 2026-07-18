@@ -24,6 +24,18 @@ nameVlue.style.color = "green";
 inputText.addEventListener("input", (e) => {
   localStorage.myName = e.target.value;
   nameVlue.innerText = localStorage.myName;
-  console.log(localStorage.myName)
-    // console.log(e.target.value)
+  console.log(localStorage.myName);
+  // console.log(e.target.value)
+});
+
+const divBox = document.querySelector(".box");
+console.log(divBox);
+divBox.innerText = "Roshan Vishwakarma";
+// divBox.style.backgroundColor = "red"
+
+divBox.addEventListener("click", (e) => {
+  console.log("click hare!");
+  // divBox.innerText  = "Roshan Vishwakarma"
+  divBox.style.backgroundColor = "red";
+  divBox.style.
 });
