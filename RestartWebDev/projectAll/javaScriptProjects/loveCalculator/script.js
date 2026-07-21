@@ -13,4 +13,5 @@ form.addEventListener("submit", (e) => {
   console.log(result);
 
   document.querySelector("h2").innerText = `Result: ${result}%`;
+  form.reset();
 });
