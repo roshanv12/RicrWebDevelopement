@@ -1,0 +1,246 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ===========================
+   Reset
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   Body
+=========================== */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  min-height: 100vh;
+}
+
+/* ===========================
+   Main Container
+=========================== */
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.heading {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.heading i {
+  margin-right: 10px;
+}
+
+/* ===========================
+   Form Card
+=========================== */
+
+.form-container {
+  width: 100%;
+  max-width: 550px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ===========================
+   Input
+=========================== */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #374151;
+}
+
+input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid #d1d5db;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+button {
+  flex: 1;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.calculate-btn {
+  background: #2563eb;
+}
+
+.calculate-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+.reset-btn {
+  background: #ef4444;
+}
+
+.reset-btn:hover {
+  background: #dc2626;
+  transform: translateY(-3px);
+}
+
+/* ===========================
+   Result
+=========================== */
+
+.result-container {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.result-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px 18px;
+
+  background: #f8fafc;
+
+  border-left: 6px solid #2563eb;
+
+  border-radius: 10px;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.result-item:hover {
+  transform: translateX(5px);
+}
+
+.result-item span:first-child {
+  color: #374151;
+
+  font-weight: 600;
+}
+
+.result-item span:last-child {
+  font-weight: bold;
+}
+
+/* ===========================
+   Colors
+=========================== */
+
+.income {
+  color: #2563eb;
+}
+
+.result {
+  color: #dc2626;
+}
+
+.percentage {
+  color: #7c3aed;
+}
+
+.after-tax {
+  color: #16a34a;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+  .form-container {
+    padding: 25px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .result-item {
+    flex-direction: column;
+
+    gap: 8px;
+
+    text-align: center;
+  }
+
+  input {
+    font-size: 15px;
+  }
+}
